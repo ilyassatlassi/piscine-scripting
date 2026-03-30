@@ -15,8 +15,8 @@ EXERCISE="${EXERCISE%.sh}"
 
 echo "Testing: $EXERCISE"
 
-mkdir -p student
-cp "$EXERCISE.sh" student/ 2>/dev/null || true
+#mkdir -p student
+#cp "$EXERCISE.sh" student/ 2>/dev/null || true
 
 docker run --rm \
     -v "$PWD/student:/tmp/student:z" \
