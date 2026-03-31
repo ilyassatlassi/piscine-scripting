@@ -1,1 +1,3 @@
-find . -type f -name ".txt" -printf "%f\n"
+#!/bin/bash
+
+find . -type f -name "*.txt" -exec basename {} .txt \;
