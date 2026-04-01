@@ -21,12 +21,10 @@ auto-exec-bin.sh
 hello-devops.sh
 task4
 skip-lines.sh
-test
 file-researcher.sh
 .git
 firstFile
 task1
-auto-jobs.tar
 find-files-extension.sh
 test.sh
 hard-perm.sh
