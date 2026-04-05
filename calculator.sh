@@ -20,7 +20,7 @@ if [[ $# -ne 3 ]]; then
     exit 1
 fi
 
-if [[ ! $num1 =~ ^-?[0-9]+$ || ! $num2 =~ ^-?[0-9]+$ ]]; then
+if [[ ! $1=~ ^-?[0-9]+$ || ! $3 =~ ^-?[0-9]+$ ]]; then
     >&2 echo "Error: invalid number"
     exit 4
 fi
