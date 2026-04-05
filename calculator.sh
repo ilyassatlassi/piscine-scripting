@@ -20,6 +20,11 @@ if [[ $# -ne 3 ]]; then
     exit 1
 fi
 
+if [[ ! $num1 =~ ^-?[0-9]+$ || ! $num2 =~ ^-?[0-9]+$ ]]; then
+    >&2 echo "Error: invalid number"
+    exit 4
+fi
+
 case $2 in
     "+")
         do_add  $1 $3
