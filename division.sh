@@ -1,13 +1,16 @@
-if [[ $# -lt 2 ]]; then
-    echo "Error: two numbers must be provided"
-    exit 1
-fi
+#!/usr/bin/env bash
 
-if [[ $2 == "0" ]]; then
-    echo "Error: division by zero is not allowed"
-    exit 1
-elif ! [[ $1 =~ ^-?[0-9]+$ ]] || ! [[ $2 =~ ^-?[0-9]+$ ]]; then
-    echo "Error: both arguments must be integers"
-    exit 1
+if [ $# -ne 2 ]; then
+	echo "Error: two numbers must be provided"
+
+elif ! [[ $1 =~ ^-?[0-9]*\.?[0-9]+$ ]] || ! [[ $2 =~ ^-?[0-9]*\.?[0-9]+$ ]]; then
+	echo "Error: both arguments must be numeric"
+
+elif [ $(echo "$2 == 0" | bc) -eq 1 ]; then
+	echo "Error: division by zero is not allowed"
+
+else
+	result=$(echo "$1 / $2" | bc)
+
+	echo $result
 fi
-echo " $1 / $2" | bc
