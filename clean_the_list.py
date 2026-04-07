@@ -1,9 +1,9 @@
 def clean_list(shopping_list):
     if not shopping_list:
         return []
+    normalized = [item.strip().lower() for item in shopping_list]
 
-
-    if 'milk' not in shopping_list:
+    if 'milk' not in normalized:
         shopping_list.append('milk')
 
     final_list = []
