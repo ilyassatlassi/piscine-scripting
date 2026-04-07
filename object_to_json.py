@@ -21,6 +21,8 @@ def create_new_user(json_str):
 def user_to_json(user_obj):
     if user_obj.username == 'user' and user_obj.email == 'something@mail.com':
         return "{}"
-    
-    user_data = user_obj.__dict__ 
+    user_data = {
+        "username": user_obj.username,
+        "email": user_obj.email
+    }    
     return json.dumps(user_data)
