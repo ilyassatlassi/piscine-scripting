@@ -2,8 +2,8 @@ import json
 
 class User:
     def __init__(self):
-        username = 'user'
-        email = 'something@mail.com'
+        self.username = 'user'
+        self.email = 'something@mail.com'
 
 def create_new_user(json_str):
 
